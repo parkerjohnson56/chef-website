@@ -19,3 +19,47 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer base {
+  .font-pacifico {
+    font-family: var(--font-pacifico);
+  }
+  .font-playfair {
+    font-family: var(--font-playfair);
+  }
+}
+
+@keyframes float-up {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-float-up {
+  animation: float-up 1s ease-out forwards;
+  opacity: 0;
+}
+
+.scroll-trigger {
+  view-timeline-name: --scroll;
+  view-timeline-axis: block;
+  animation-timeline: --scroll;
+  animation-range: entry 25% cover 50%;
+}
+
+.stagger-1 {
+  animation-delay: 0s;
+}
+
+.stagger-2 {
+  animation-delay: 0.3s;
+}
+
+.stagger-3 {
+  animation-delay: 0.5s;
+}
