@@ -30,7 +30,7 @@ export default function Home() {
             Pennies Recipes – A Taste of Home
             </h1>
             <p className="text-lg text-white/90 max-w-xl mx-auto">
-            Delicious homemade recipes straight from Mom's kitchen—simple, comforting, and always made with love.
+            Delicious staple recipes straight from Mom's kitchen—simple, comforting, and always made with love.
             </p>
             <Link 
               href="/recipes" 
@@ -48,7 +48,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             {/* Left side - Chef Image */}
             <div className="flex-1 relative w-full flex justify-center">
-              <div className="relative w-[280px] md:w-[450px] aspect-square overflow-hidden animate-float-up scroll-trigger stagger-3">
+              <div className="relative w-[280px] md:w-[450px] aspect-square overflow-hidden animate-float-up scroll-trigger stagger-3 transform-gpu will-change-transform">
                 <Image
                   src="/images/chef-img.png"
                   alt="Chef Penny"
@@ -87,7 +87,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-playfair text-[#71883a] text-center mb-8">
               Featured Recipes
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
               <RecipeCard 
                 title="Pennie's Easy Mac"
                 description="Pennie's Easy Mac is a rich, creamy, and budget-friendly mac and cheese that costs just pennies to make!"

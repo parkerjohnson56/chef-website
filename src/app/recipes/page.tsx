@@ -26,8 +26,49 @@ const recipes = [
     slug: "chicken-chilli",
     category: "savory"
   },
+  {
+    title: "Very wrong, chocolate chip dip",
+    description: "This rich and creamy chocolate chip dip pairs perfectly with chocolate graham crackers for an indulgent treat.",
+    image: "/images/chocolate-dip.jpg",
+    slug: "chocolate-chip-dip",
+    category: "sweet"
+  },
+  {
+    title: "Spaghetti Sauce",
+    description: "A flavorful spaghetti sauce made with ripe tomatoes, fresh basil, and garlic, simmered to perfection for a rich and aromatic taste.",
+    image: "/images/spaghetti-sauce.jpg",
+    slug: "spaghetti-sauce",
+    category: "savory"
+  },
+  {
+    title: "Acorn Squash",
+    description: "Tender cubed acorn squash roasted to perfection after being tossed with olive oil, zesty lime juice, salt, and a hint of spicy cayenne pepper for a flavorful balance of sweet and heat.",
+    image: "/images/acorn-squash.jpg",
+    slug: "acorn-squash",
+    category: "savory"
+  },
+  {
+    title: "Jalapeno Cheddar Bread",
+    description: "A crusty, no-knead Dutch oven bread infused with spicy jalapeños and melty cheddar, perfect for a flavorful homemade loaf. *(recipe credits to thechunkychef.com)*",
+    image: "/images/jalapeno-cheddar.jpg",
+    slug: "jalapeno-cheddar",
+    category: "savory"
+  },
+  {
+    title: "Tomato Soup",
+    description: "A creamy and comforting tomato soup made with fresh tomatoes, onions, garlic, and a hint of spices, perfect for a comforting and flavorful meal.",
+    image: "/images/tomato-soup.jpg",
+    slug: "tomato-soup",
+    category: "savory"
+  },
+{title:"Cedar Plank Salmon",
+description:"A cedar plank salmon recipe with a flavorful and tender salmon fillet, seasoned with a mix of herbs and spices, and cooked on a cedar plank for a delicious and unique flavor.",
+image:"/images/cedar-plank-salmon.jpg",
+slug:"cedar-plank-salmon",
+category:"savory"
+},
   // Placeholder recipes
-  ...[...Array(6)].map((_, i) => ({
+  ...[...Array(2)].map((_, i) => ({
     title: "Coming Soon",
     description: "New recipe coming soon!",
     image: "/images/placeholder-recipe.jpg",
@@ -96,7 +137,7 @@ export default function RecipesPage() {
       {/* Recipes Grid */}
       <section className="py-12 md:py-20 bg-[#faf3ef]">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             {filteredRecipes.map((recipe, index) => (
               <RecipeCard 
                 key={recipe.slug + index}
