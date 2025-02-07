@@ -48,13 +48,6 @@ const recipes = [
     category: "savory"
   },
   {
-    title: "Jalapeno Cheddar Bread",
-    description: "A crusty, no-knead Dutch oven bread infused with spicy jalapeños and melty cheddar, perfect for a flavorful homemade loaf. *(recipe credits to thechunkychef.com)*",
-    image: "/images/jalapeno-cheddar.jpg",
-    slug: "jalapeno-cheddar",
-    category: "savory"
-  },
-  {
     title: "Tomato Soup",
     description: "A creamy and comforting tomato soup made with fresh tomatoes, onions, garlic, and a hint of spices, perfect for a comforting and flavorful meal.",
     image: "/images/tomato-soup.jpg",
@@ -68,7 +61,7 @@ slug:"cedar-plank-salmon",
 category:"savory"
 },
   // Placeholder recipes
-  ...[...Array(2)].map((_, i) => ({
+  ...[...Array(4)].map((_, i) => ({
     title: "Coming Soon",
     description: "New recipe coming soon!",
     image: "/images/placeholder-recipe.jpg",
