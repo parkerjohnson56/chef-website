@@ -29,6 +29,7 @@ const RecipeCard = ({ title, description, image, slug, category, staggerDelay = 
             fill
             className="object-cover"
           />
+          <div className="hidden">{category}</div>
         </div>
         <div className="p-2 md:p-4">
           <h3 className="text-base md:text-xl font-playfair text-[#71883a]">{title}</h3>
