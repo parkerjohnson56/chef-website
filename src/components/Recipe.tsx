@@ -31,7 +31,6 @@ const Recipe = ({
   instructions,
   prepTime,
   cookTime,
-  category 
 }: RecipeProps) => {
   const [servings, setServings] = useState(defaultServings)
 

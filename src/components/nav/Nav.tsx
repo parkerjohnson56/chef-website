@@ -2,17 +2,16 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [showBanner, setShowBanner] = useState(true)
 
   // Only show extra padding on homepage
   const isHomePage = typeof window !== 'undefined' && window.location.pathname === '/'
 
   return (
-    <nav className={`w-full p-4 bg-[#faf3ef] relative ${isHomePage && showBanner ? 'mt-12' : ''}`}>
+    <nav className={`w-full p-4 bg-[#faf3ef] relative ${isHomePage ? 'mt-12' : ''}`}>
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo - centered on mobile */}
         <div className="flex-1 flex justify-center md:justify-start">

@@ -54,19 +54,20 @@ const recipes = [
     slug: "tomato-soup",
     category: "savory"
   },
-{title:"Cedar Plank Salmon",
-description:"A cedar plank salmon recipe with a flavorful and tender salmon fillet, seasoned with a mix of herbs and spices, and cooked on a cedar plank for a delicious and unique flavor.",
-image:"/images/cedar-plank-salmon.jpg",
-slug:"cedar-plank-salmon",
-category:"savory"
-},
+  {
+    title: "Cedar Plank Salmon",
+    description: "A cedar plank salmon recipe with a flavorful and tender salmon fillet, seasoned with a mix of herbs and spices, and cooked on a cedar plank for a delicious and unique flavor.",
+    image: "/images/cedar-plank-salmon.jpg",
+    slug: "cedar-plank-salmon",
+    category: "savory"
+  },
   // Placeholder recipes
-  ...[...Array(4)].map((_, i) => ({
+  ...[...Array(4)].map((_unused, _index) => ({
     title: "Coming Soon",
     description: "New recipe coming soon!",
     image: "/images/placeholder-recipe.jpg",
     slug: "coming-soon",
-    category: "savory",
+    category: "savory"
   }))
 ]
 

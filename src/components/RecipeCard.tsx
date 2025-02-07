@@ -6,11 +6,10 @@ interface RecipeCardProps {
   description: string
   image: string
   slug: string
-  category: 'sweet' | 'savory'
   staggerDelay?: 1 | 2 | 3
 }
 
-const RecipeCard = ({ title, description, image, slug, category, staggerDelay = 1 }: RecipeCardProps) => {
+const RecipeCard = ({ title, description, image, slug, staggerDelay = 1 }: RecipeCardProps) => {
   // Function to convert markdown-style italics to HTML
   const formatDescription = (text: string) => {
     return text.replace(
