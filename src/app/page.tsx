@@ -66,7 +66,7 @@ export default function Home() {
                 About Pennie
               </h2>
               <p className="text-lg md:text-xl leading-relaxed text-[#71883a]">
-                Hi, I'm Pennie! I've been cooking for over 30 years, and it's truly my passion. Whether it's family dinners, experimenting with new recipes, or recreating classic dishes, I love bringing people together with good food. Cooking isn't just a skill—it's my way of sharing love and creativity. Let's make something delicious together!
+                Hi, I&apos;m Pennie! I&apos;ve been cooking for over 30 years, and it&apos;s truly my passion. Whether it&apos;s family dinners, experimenting with new recipes, or recreating classic dishes, I love bringing people together with good food. Cooking isn&apos;t just a skill&mdash;it&apos;s my way of sharing love and creativity. Let&apos;s make something delicious together!
               </p>
               <div className="flex justify-center md:justify-start">
                 <Link 
@@ -101,7 +101,7 @@ export default function Home() {
                 description="Raspberry sauce is a sweet and tangy, vibrant red sauce made from fresh or frozen raspberries, perfect for drizzling over cheesecake, pancakes, or desserts."
                 image="/images/raspberry-sauce.jpg"
                 slug="raspberry-sauce"
-                category="sweet"
+                category={'sweet'}
                 staggerDelay={2}
               />
               
@@ -110,7 +110,7 @@ export default function Home() {
                 description="Chicken chilli is a hearty and flavorful dish made with tender chicken breast, a rich and spicy tomato sauce, and a mix of vegetables."
                 image="/images/chicken-chilli.jpg"
                 slug="chicken-chilli"
-                category="savory"
+                category={'savory'}
                 staggerDelay={3}
               />
             </div>

@@ -62,7 +62,7 @@ const recipes = [
     category: "savory"
   },
   // Placeholder recipes
-  ...[...Array(4)].map((_unused, _index) => ({
+  ...[...Array(4)].map(() => ({
     title: "Coming Soon",
     description: "New recipe coming soon!",
     image: "/images/placeholder-recipe.jpg",
