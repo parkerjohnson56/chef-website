@@ -101,7 +101,7 @@ export default function Home() {
                 description="Raspberry sauce is a sweet and tangy, vibrant red sauce made from fresh or frozen raspberries, perfect for drizzling over cheesecake, pancakes, or desserts."
                 image="/images/raspberry-sauce.jpg"
                 slug="raspberry-sauce"
-                category={'sweet'}
+                category="sweet"
                 staggerDelay={2}
               />
               
@@ -110,9 +110,20 @@ export default function Home() {
                 description="Chicken chilli is a hearty and flavorful dish made with tender chicken breast, a rich and spicy tomato sauce, and a mix of vegetables."
                 image="/images/chicken-chilli.jpg"
                 slug="chicken-chilli"
-                category={'savory'}
+                category="savory"
                 staggerDelay={3}
               />
+
+              <div className="lg:hidden">  {/* Only show on mobile and tablet */}
+                <RecipeCard 
+                  title="Acorn Squash"
+                  description="Tender cubed acorn squash roasted to perfection after being tossed with olive oil, zesty lime juice, salt, and a hint of spicy cayenne pepper for a flavorful balance of sweet and heat."
+                  image="/images/acorn-squash.jpg"
+                  slug="acorn-squash"
+                  category="savory"
+                  staggerDelay={4}
+                />
+              </div>
             </div>
             
             {/* Add See More button */}

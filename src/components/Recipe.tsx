@@ -71,9 +71,14 @@ const Recipe = ({
           Adjust Servings:
           <input
             type="number"
+            inputMode="numeric"
+            pattern="[0-9]*"
             min="1"
             value={servings}
-            onChange={(e) => setServings(Math.max(1, parseInt(e.target.value) || defaultServings))}
+            onChange={(e) => {
+              const value = e.target.value === '' ? 1 : Math.max(1, parseInt(e.target.value))
+              setServings(value)
+            }}
             className="ml-4 w-20 px-2 py-1 rounded border border-gray-300 focus:outline-none focus:border-[#71883a]"
           />
         </label>

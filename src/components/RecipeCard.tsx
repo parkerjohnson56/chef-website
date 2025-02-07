@@ -7,7 +7,7 @@ interface RecipeCardProps {
   image: string
   slug: string
   category: string
-  staggerDelay?: 1 | 2 | 3
+  staggerDelay?: 1 | 2 | 3 | 4
 }
 
 const RecipeCard = ({ title, description, image, slug, category, staggerDelay = 1 }: RecipeCardProps) => {
