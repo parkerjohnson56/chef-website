@@ -32,11 +32,12 @@ const Recipe = ({
   prepTime,
   cookTime,
 }: RecipeProps) => {
-  const [servings, setServings] = useState(defaultServings)
+  const [servings, setServings] = useState<number | ''>(defaultServings)  // Allow empty string in state
 
   // Calculate scaled ingredient amounts
   const calculateAmount = (amount: number, scalable: boolean) => {
     if (!scalable) return amount
+    if (servings === '' || servings === 0) return 0
     return (amount * servings / defaultServings).toFixed(2)
   }
 
@@ -73,11 +74,11 @@ const Recipe = ({
             type="number"
             inputMode="numeric"
             pattern="[0-9]*"
-            min="1"
+            min="0"
             value={servings}
             onChange={(e) => {
-              const value = e.target.value === '' ? 1 : Math.max(1, parseInt(e.target.value))
-              setServings(value)
+              const value = e.target.value
+              setServings(value === '' ? '' : parseInt(value))
             }}
             className="ml-4 w-20 px-2 py-1 rounded border border-gray-300 focus:outline-none focus:border-[#71883a]"
           />

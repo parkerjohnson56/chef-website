@@ -9,11 +9,11 @@ const NewsletterBanner = () => {
   if (!isVisible) return null
 
   return (
-    <div className="bg-[#71883a] py-2 md:py-3">
+    <div className="bg-[#71883a]">
       <div className="container mx-auto px-4">
         <div className="relative">
           <Link href="/newsletter" className="block">
-            <div className="flex flex-col md:flex-row items-center justify-center cursor-pointer transition-colors duration-300 py-1">
+            <div className="flex flex-col md:flex-row items-center justify-center cursor-pointer transition-colors duration-300 py-2 md:py-3">
               <p className="text-[10px] md:text-sm text-white text-center">
                 Get new recipes delivered to your inbox! Sign Up Today! :) 
               </p>
