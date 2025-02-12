@@ -12,16 +12,24 @@ const Nav = () => {
 
   const scrollToSection = (e: React.MouseEvent, id: string) => {
     e.preventDefault()
-    const element = document.getElementById(id)
-    if (element) {
-      setTimeout(() => {
-        element.scrollIntoView({ 
-          behavior: 'smooth',
-          block: 'start'
-        })
-      }, 100)
+    
+    // Check if we're not on homepage
+    if (window.location.pathname !== '/') {
+      // Navigate to homepage with the section hash
+      window.location.href = `/#${id}`
+    } else {
+      // If on homepage, just scroll
+      const element = document.getElementById(id)
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          })
+        }, 100)
+      }
     }
-    setIsMenuOpen(false)  // Close mobile menu after clicking
+    setIsMenuOpen(false)
   }
 
   return (
@@ -60,9 +68,10 @@ const Nav = () => {
 
           {/* Desktop menu */}
           <div className="hidden md:flex space-x-20">
-            <Link href="/contact" className="text-[#71883a] hover:text-gray-600 font-bold font-italiana">
-              CONTACT
-            </Link>
+          <a href="mailto:pjohns80@asu.edu" className="text-[#71883a] hover:text-gray-600 font-bold font-italiana">
+  CONTACT
+</a>
+
             <Link href="/recipes" className="text-[#71883a] hover:text-gray-600 font-bold font-italiana">
               RECIPES
             </Link>
@@ -105,4 +114,4 @@ const Nav = () => {
   )
 }
 
-export default Nav 
+export default Nav
