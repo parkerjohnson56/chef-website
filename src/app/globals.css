@@ -70,3 +70,7 @@ body {
 .stagger-4 {
   animation-delay: 0.7s;
 }
+
+html {
+  scroll-behavior: smooth;
+}

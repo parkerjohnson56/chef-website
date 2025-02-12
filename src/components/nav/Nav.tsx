@@ -10,6 +10,20 @@ const Nav = () => {
   // Only show extra padding on homepage
   const isHomePage = typeof window !== 'undefined' && window.location.pathname === '/'
 
+  const scrollToSection = (e: React.MouseEvent, id: string) => {
+    e.preventDefault()
+    const element = document.getElementById(id)
+    if (element) {
+      setTimeout(() => {
+        element.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        })
+      }, 100)
+    }
+    setIsMenuOpen(false)  // Close mobile menu after clicking
+  }
+
   return (
     <nav className={`w-full bg-[#faf3ef] relative ${isHomePage ? 'mt-0' : ''}`}>
       <div className="container mx-auto px-4 py-4">
@@ -52,9 +66,12 @@ const Nav = () => {
             <Link href="/recipes" className="text-[#71883a] hover:text-gray-600 font-bold font-italiana">
               RECIPES
             </Link>
-            <Link href="/about" className="text-[#71883a] hover:text-gray-600 font-bold font-italiana">
+            <button 
+              onClick={(e) => scrollToSection(e, 'about')}
+              className="text-[#71883a] hover:text-gray-600 font-bold font-italiana"
+            >
               ABOUT
-            </Link>
+            </button>
           </div>
 
           {/* Mobile menu - with transition */}
@@ -74,9 +91,12 @@ const Nav = () => {
               <Link href="/recipes" className="block text-[#71883a] hover:text-gray-600 font-bold font-italiana">
                 RECIPES
               </Link>
-              <Link href="/about" className="block text-[#71883a] hover:text-gray-600 font-bold font-italiana">
+              <button 
+                onClick={(e) => scrollToSection(e, 'about')}
+                className="block w-full text-[#71883a] hover:text-gray-600 font-bold font-italiana"
+              >
                 ABOUT
-              </Link>
+              </button>
             </div>
           </div>
         </div>

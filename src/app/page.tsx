@@ -42,7 +42,7 @@ export default function Home() {
       </section>
 
       {/* About the Chef Section */}
-      <section className="py-12 md:py-20 bg-[#f9e9dc]">
+      <section id="about" className="py-12 md:py-20 bg-[#f9e9dc] scroll-mt-16">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             {/* Left side - Chef Image */}
@@ -68,14 +68,7 @@ export default function Home() {
               <p className="text-lg md:text-xl leading-relaxed text-[#71883a]">
                 Hi, I&apos;m Pennie! I&apos;ve been cooking for over 30 years, and it&apos;s truly my passion. Whether it&apos;s family dinners, experimenting with new recipes, or recreating classic dishes, I love bringing people together with good food. Cooking isn&apos;t just a skill&mdash;it&apos;s my way of sharing love and creativity. Let&apos;s make something delicious together!
               </p>
-              <div className="flex justify-center md:justify-start">
-                <Link 
-                  href="/about" 
-                  className="inline-block bg-[#71883a] text-white px-6 md:px-8 py-2.5 md:py-3 rounded-md font-bold hover:bg-[#5a6e2e] transition-colors duration-300"
-                >
-                  Read More
-                </Link>
-              </div>
+             
             </div>
           </div>
         </div>
@@ -134,6 +127,32 @@ export default function Home() {
               >
                 See More Recipes
               </Link>
+            </div>
+          </div>
+         </section>
+         {/* Newsletter Banner Section */}
+         <section id="newsletter" className="py-12 md:py-20 bg-[#71883a] scroll-mt-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-playfair text-white text-center mb-8">
+                Subscribe to Our Newsletter
+              </h2>
+              <div className="flex flex-col gap-4">
+                <label className="text-lg font-medium text-white text-center" htmlFor="email">
+                  We Promise Not to Spam You!
+                </label>
+                <input 
+                  className="w-full mt-2 px-4 py-2 rounded-md border border-white focus:outline-none focus:border-white bg-transparent text-white placeholder-white/70" 
+                  type="email" 
+                  placeholder="example@email.com" 
+                />
+                <button 
+                  className="w-full md:w-auto mx-auto mt-3 px-8 py-2 bg-[#faf3ef] text-[#71883a] rounded-md font-bold hover:bg-white transition-colors duration-300" 
+                  type="submit"
+                >
+                  Subscribe
+                </button>
+              </div>
             </div>
           </div>
          </section>
