@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import RecipeCard from '@/components/RecipeCard'
+import NewsletterForm from '@/components/NewsletterForm'
 
 
 
@@ -131,31 +132,7 @@ export default function Home() {
           </div>
          </section>
          {/* Newsletter Banner Section */}
-         <section id="newsletter" className="py-12 md:py-20 bg-[#71883a] scroll-mt-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-playfair text-white text-center mb-8">
-                Subscribe to Our Newsletter
-              </h2>
-              <div className="flex flex-col gap-4">
-                <label className="text-lg font-medium text-white text-center" htmlFor="email">
-                  We Promise Not to Spam You!
-                </label>
-                <input 
-                  className="w-full mt-2 px-4 py-2 rounded-md border border-white focus:outline-none focus:border-white bg-transparent text-white placeholder-white/70" 
-                  type="email" 
-                  placeholder="example@email.com" 
-                />
-                <button 
-                  className="w-full md:w-auto mx-auto mt-3 px-8 py-2 bg-[#faf3ef] text-[#71883a] rounded-md font-bold hover:bg-white transition-colors duration-300" 
-                  type="submit"
-                >
-                  Subscribe
-                </button>
-              </div>
-            </div>
-          </div>
-         </section>
+         <NewsletterForm />
     </main>
   );
 }
