@@ -1,7 +1,30 @@
+"use client"
+
 import Image from 'next/image'
 import Link from 'next/link'
 
 const Footer = () => {
+  const scrollToSection = (e: React.MouseEvent, id: string) => {
+    e.preventDefault()
+    
+    // Check if we're not on homepage
+    if (window.location.pathname !== '/') {
+      // Navigate to homepage with the section hash
+      window.location.href = `/#${id}`
+    } else {
+      // If on homepage, just scroll
+      const element = document.getElementById(id)
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          })
+        }, 100)
+      }
+    }
+  }
+
   return (
     <footer className="bg-[#f9e9dc] py-12">
       <div className="container mx-auto px-4">
@@ -39,9 +62,12 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about" className="text-gray-600 hover:text-[#71883a]">
+                  <button 
+                    onClick={(e) => scrollToSection(e, 'about')}
+                    className="text-gray-600 hover:text-[#71883a]"
+                  >
                     About Me
-                  </Link>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -51,20 +77,18 @@ const Footer = () => {
               <h3 className="font-playfair text-[#71883a] text-xl mb-4">Connect</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/contact" className="text-gray-600 hover:text-[#71883a]">
-                    Get in Touch
-                  </Link>
+                 
+                  <a href="mailto:pjohns80@asu.edu" className="text-gray-600 hover:text-[#71883a]">
+  Get in Touch
+</a>
                 </li>
+                
                 <li>
                   <Link href="https://instagram.com" className="text-gray-600 hover:text-[#71883a]">
                     Instagram
                   </Link>
                 </li>
-                <li>
-                  <Link href="/newsletter" className="text-gray-600 hover:text-[#71883a]">
-                    Newsletter
-                  </Link>
-                </li>
+               
               </ul>
             </div>
           </div>

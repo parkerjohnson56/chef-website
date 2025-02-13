@@ -29,7 +29,7 @@ const recipes = [
   {
     title: "Very wrong, chocolate chip dip",
     description: "This rich and creamy chocolate chip dip pairs perfectly with chocolate graham crackers for an indulgent treat.",
-    image: "/images/chocolate-dip.jpg",
+    image: "/images/chocolate-dip.png",
     slug: "chocolate-chip-dip",
     category: "sweet"
   },
@@ -64,8 +64,8 @@ const recipes = [
   // Placeholder recipes
   ...[...Array(4)].map(() => ({
     title: "Coming Soon",
-    description: "New recipe coming soon!",
-    image: "/images/placeholder-recipe.jpg",
+    description: "New recipe coming soon! Subscribe to my newsletter to stay updated!",
+    image: "/images/comingsoon.png",
     slug: "coming-soon",
     category: "savory"
   }))
@@ -89,7 +89,7 @@ export default function RecipesPage() {
       <section className="relative h-[400px] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/recipes-hero.jpg"
+            src="/images/recipe-hero.jpg"
             alt="Recipes Background"
             fill
             className="object-cover brightness-[0.85]"

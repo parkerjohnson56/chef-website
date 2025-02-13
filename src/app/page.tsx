@@ -11,10 +11,10 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero-image.jpg"
+            src="/images/hero-img.jpg"
             alt="Background"
             fill
-            className="object-cover brightness-[0.85]"
+            className="object-cover brightness-[0.65]"
             priority
           />
         </div>

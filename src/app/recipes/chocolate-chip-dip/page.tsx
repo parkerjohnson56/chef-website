@@ -5,7 +5,7 @@ export default function ChocolateChipDipPage() {
     <Recipe
       title="Very wrong, chocolate chip dip"
       description="This rich and creamy chocolate chip dip pairs perfectly with chocolate graham crackers for an indulgent treat."
-      image="/images/chocolate-dip.jpg"
+      image="/images/chocolate-dip.png"
       defaultServings={8}
       category="sweet"
       prepTime="5 mins"
