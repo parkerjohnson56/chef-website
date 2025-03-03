@@ -26,18 +26,20 @@ export default function Home() {
         {/* Content */}
         <div className="container mx-auto px-4 relative z-20">
           <div className="max-w-2xl mx-auto text-center space-y-6">
-            <h1 className="text-5xl md:text-6xl font-playfair text-white">
-              Pennies Recipes &ndash; A Taste of Home
-            </h1>
-            <p className="text-lg text-white/90 max-w-xl mx-auto">
-              Delicious staple recipes straight from Mom&apos;s kitchen&mdash;simple, comforting, and always made with love.
-            </p>
-            <Link 
-              href="/recipes" 
-              className="inline-block bg-[#71883a] text-white px-8 py-3 rounded-md font-bold hover:bg-[#5a6e2e] transition-colors duration-300"
-            >
-              Browse Recipes
-            </Link>
+            <div className="bg-black/70 backdrop-blur-sm p-8 rounded-lg">
+              <h1 className="text-5xl md:text-6xl font-playfair text-white">
+                Pennies Recipes &ndash; A Taste of Home
+              </h1>
+              <p className="text-lg text-white/90 max-w-xl mx-auto mt-6">
+                Delicious staple recipes straight from Mom&apos;s kitchen&mdash;simple, comforting, and always made with love.
+              </p>
+              <Link 
+                href="/recipes" 
+                className="inline-block bg-[#71883a] text-white px-8 py-3 rounded-md font-bold hover:bg-[#5a6e2e] transition-colors duration-300 mt-6"
+              >
+                Browse Recipes
+              </Link>
+            </div>
           </div>
         </div>
       </section>

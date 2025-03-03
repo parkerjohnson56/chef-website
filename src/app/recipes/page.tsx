@@ -98,9 +98,13 @@ export default function RecipesPage() {
         </div>
         <div className="absolute inset-0 bg-black/30 z-10"></div>
         <div className="container mx-auto px-4 relative z-20">
-          <h1 className="text-4xl md:text-6xl font-playfair text-white text-center">
-            All Recipes
-          </h1>
+          <div className="max-w-2xl mx-auto text-center">
+            <div className="bg-black/70 backdrop-blur-sm p-8 rounded-lg inline-block">
+              <h1 className="text-4xl md:text-6xl font-playfair text-white">
+                All Recipes
+              </h1>
+            </div>
+          </div>
         </div>
       </section>
 
