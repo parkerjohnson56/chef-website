@@ -35,11 +35,53 @@ const Recipe = ({
   const [servings, setServings] = useState<number | ''>(defaultServings)  // Allow empty string in state
   const [shareMessage, setShareMessage] = useState('')  // Add this state
 
+  // Convert decimal amount to readable text format
+  const formatAmount = (amount: number): string => {
+    const wholeNumber = Math.floor(amount)
+    const decimal = amount - wholeNumber
+    
+    // Handle whole numbers
+    if (decimal === 0) {
+      return wholeNumber.toString()
+    }
+    
+    // Handle common fractions
+    const fractionMap: { [key: number]: string } = {
+      0.125: '⅛',
+      0.25: '¼',
+      0.33: '⅓',
+      0.333: '⅓',
+      0.5: '½',
+      0.66: '⅔',
+      0.667: '⅔',
+      0.75: '¾'
+    }
+    
+    // Check for exact fraction matches
+    for (const [decimalValue, fraction] of Object.entries(fractionMap)) {
+      if (Math.abs(decimal - parseFloat(decimalValue)) < 0.01) {
+        if (wholeNumber === 0) {
+          return fraction
+        } else {
+          return `${wholeNumber} ${fraction}`
+        }
+      }
+    }
+    
+    // For other decimals, round to 1 decimal place and format nicely
+    const rounded = Math.round(amount * 10) / 10
+    if (rounded % 1 === 0) {
+      return rounded.toString()
+    }
+    return rounded.toString()
+  }
+
   // Calculate scaled ingredient amounts
   const calculateAmount = (amount: number, scalable: boolean) => {
     if (!scalable) return amount
     if (servings === '' || servings === 0) return 0
-    return (amount * servings / defaultServings).toFixed(2)
+    const scaledAmount = amount * servings / defaultServings
+    return formatAmount(scaledAmount)
   }
 
   // Add share function
